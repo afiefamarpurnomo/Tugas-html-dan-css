@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMK Telkom Purwokerto | Kontak</title>
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Java Script -->
-</head>
-<body>
-    <div class="hero">
-        <div class="navbar">
-            <img src="https://i.ibb.co/kDWLCH9/Logo-SMK-Telkom-PWT.png" width="150" alt="Logo SMK Telkom">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Profil</a></li>
-                <li><a href="contact.html">Kontak</a></li>
-            </ul>
-        </div>
-    <hr />
-    <header style="text-align: center;">
-    </a><img src="https://i.ibb.co/7jc7L3q/247395812-10158060024302274-7528067006541901640-n.jpg" alt="Baner SMK Telkom-PWT" width="520" height="200" border="0"></a></header> 
-    <hr />
-
-    <div>
-        <h2 align="center">HUBUNGI KAMI</h2></header>
-        <form id="myForm">
-            <label for="name">Nama Lengkap</label><br />
-            <input type=”text” id="nama" name="nama" placeholder="Nama Lengkap" required/>
-            <br />
-           
-            <label for="email">Email</label><br />
-            <input type="email" id="email" name="email" placeholder="Alamat Email"required/>
-            <br />
-
-            <label for="subject">Pesan</label><br />
-            <textarea id="pesan" name="pesan" placeholder="Tuliskan pesanmu.." style="height:100px"></textarea>
-        <br />
-            <input type="button" value="kirim" onclick="hasil()">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SMK Telkom Purwokerto | Profil</title>
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Java Script -->
+    </head>
+    <body>
+        <div class="hero">
+            <div class="navbar">
+                <img src="https://i.ibb.co/kDWLCH9/Logo-SMK-Telkom-PWT.png" width="150" alt="Logo SMK Telkom">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Profil</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
         <hr />
-            <p id="hasil-nama"></p>
-            <p id="hasil-email"></p>
-            <p id="hasil-pesan"></p>
-            <br />
-        </form>
-    </div>
+        <header style="text-align: center;">
+        </a><img src="https://i.ibb.co/7jc7L3q/247395812-10158060024302274-7528067006541901640-n.jpg" alt="Baner SMK Telkom-PWT" width="520" height="200" border="0"></a></header> 
+        <hr />
+        <h2 align="center">HUBUNGI KAMI</h2>
+        <div class="container">
+            <form action="action_page.php">
+          
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" placeholder="Tuliskan namamu..">
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Tuliskan emailmu..">
+          
+              <label for="subject">Pesan</label>
+              <textarea id="pesan" name="pesan" placeholder="Tuliskan pesanmu.." style="height:200px"></textarea>
+          
+              <input type="button" value="kirim" onclick="hasil()">
+
+              <br>
+              <p id="hasil-nama"></p>
+              <p id="hasil-email"></p>
+              <p id="hasil-pesan"></p>
+          
+            </form>
+        <script>
+            function hasil() {
+                var nama = document.getElementById("nama").value ;
+                var email = document.getElementById("email").value ;
+                var pesan = document.getElementById("pesan").value ;
+
+                if (nama !="" && email !="" && pesan!=""){
+                    document.getElementById("hasil-nama").innerHTML = nama
+                    document.getElementById("hasil-email").innerHTML = email
+                    document.getElementById("hasil-pesan").innerHTML = pesan
+                    return True;
+                }else{
+                    alert('Mohon isi form dengan lengkap !');
+            }
+        }
     
-    <script>
-        function hasil() {
-            var nama = document.getElementById("nama").value ;
-            var email = document.getElementById("email").value ;
-            var pesan = document.getElementById("pesan").value ;
-
-            if (nama !="" && email !="" && pesan!=""){
-                document.getElementById("hasil-nama").innerHTML = nama
-                document.getElementById("hasil-email").innerHTML = email
-                document.getElementById("hasil-pesan").innerHTML = pesan
-                return True;
-            }else{
-                alert('Mohon isi form dengan lengkap !');
-            }
-            }
     </script>
-
+</div>
 <hr>
 <footer style="text-align: center;">
-    <p>Copyright &copy; 2022 Kelompok 4.</p>
-</footer>
+        <p>Copyright &copy; 2022 Kelompok 4.</p>
+        </footer>
+    </div>
 </body>
 </html>
