@@ -26,21 +26,25 @@
         </a><img src="https://i.ibb.co/7jc7L3q/247395812-10158060024302274-7528067006541901640-n.jpg" alt="Baner SMK Telkom-PWT" width="520" height="200" border="0"></a></header> 
         <hr />
         <h2 align="center">HUBUNGI KAMI</h2>
-        <div class="container">
+            <div class="container">
             <form action="action_page.php">
           
-              <label for="nama">Nama Lengkap:</label>
-              <input type="text" id="nama" name="nama" placeholder="Masukan Nama Lengkap..">
+              <label for="nama">Nama (required)</label>
+              <input type="text" id="nama" name="nama" placeholder="">
           
-              <label for="email">Alamat Email:</label>
-              <input type="email" id="email" name="email" placeholder="Maukan Alamat Email..">
+              <label for="email">Email (required)</label>
+              <input type="email" id="email" name="email" placeholder="">
           
-              <label for="subject">Pesan:</label>
-              <textarea id="pesan" name="pesan" placeholder="Masukan Isi Pesan.." style="height:200px"></textarea>
+              <label for="subject">Pesan</label>
+              <textarea id="pesan" name="pesan" placeholder="" style="height:200px"></textarea>
           
               <input type="button" value="kirim" onclick="hasil()">
-
               <br>
+             *Nantikan jawaban dari kami. Cek kotak masuk email Anda secara berkala.
+              <br>
+              <br>
+              <hr>
+
               <p id="hasil-nama"></p>
               <p id="hasil-email"></p>
               <p id="hasil-pesan"></p>
@@ -60,9 +64,11 @@
                 }else{
                     alert('Mohon isi form dengan lengkap !');
             }
+            
         }
     
     </script>
+
 </div>
 <hr>
 <footer style="text-align: center;">
