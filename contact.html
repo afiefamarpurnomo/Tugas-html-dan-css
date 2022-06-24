@@ -21,24 +21,32 @@
                     <li><a href="contact.html">Kontak</a></li>
                 </ul>
             </div>
-        <hr />
-        <header style="text-align: center;">
-        </a><img src="https://i.ibb.co/7jc7L3q/247395812-10158060024302274-7528067006541901640-n.jpg" alt="Baner SMK Telkom-PWT" width="520" height="200" border="0"></a></header> 
-        <hr />
-        <h2 align="center">HUBUNGI KAMI</h2>
-            <div class="container">
-            <form action="action_page.php">
+            <hr />
+          </div>
+        </nav>
+        
+        <div class="container">
+          <div style="text-align:center">
+            <h2>HUBUNGI KAMI</h2>
+            <p>Silakan isi form di bawah ini untuk bertanya kepada kami</p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="https://www.ko.in.th/wp-content/uploads/2020/05/customer-service-1024x683.jpg" style="width:100%">
+            </div>
+        
+            <div class="column">
+              <form action="/action_page.php">
+                    <label for="nama">Nama (required)</label><input type="text" id="nama" name="nama" placeholder="">
           
-              <label for="nama">Nama (required)</label>
-              <input type="text" id="nama" name="nama" placeholder="">
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" placeholder="">
           
-              <label for="email">Email (required)</label>
-              <input type="email" id="email" name="email" placeholder="">
+            <label for="subject">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="" style="height:200px"></textarea>
           
-              <label for="subject">Pesan</label>
-              <textarea id="pesan" name="pesan" placeholder="" style="height:200px"></textarea>
-          
-              <input type="button" value="kirim" onclick="hasil()">
+            <input type="button" value="kirim" onclick="hasil()">
+              <br>
               <br>
 
               <p id="hasil-nama"></p>
@@ -65,11 +73,9 @@
     
     </script>
 
-</div>
 <hr>
 <footer style="text-align: center;">
-        <p>Copyright &copy; 2022 Kelompok 4.</p>
-        </footer>
-    </div>
+    <p>Copyright &copy; 2022 Kelompok 4.</p>
+</footer>
 </body>
-</html>
+</html> 
