@@ -8,6 +8,23 @@
   width: 80%;
   margin: auto;
 }
+.kolom {
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+.column {
+  float: left;
+  margin-top: 6px;
+  padding: 20px;
+  width: 45%;
+}  
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 /* Navbar */
 .navbar{
@@ -51,6 +68,7 @@
   width: 100%;
 
 }
+
 /* Akhir Navbar */
 
 
@@ -123,8 +141,13 @@ input[type=button]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 20px;
+}
+.container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 
@@ -134,3 +157,5 @@ input[type=button]:hover {
   text-align: center;
 }
 /* Akhir footer */
+
+
