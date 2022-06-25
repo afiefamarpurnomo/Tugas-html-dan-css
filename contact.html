@@ -32,48 +32,60 @@
           </div>
           <div class="row">
             <div class="column">
-              <img src="https://www.ko.in.th/wp-content/uploads/2020/05/customer-service-1024x683.jpg" style="width:100%">
+              <img src="https://smktelkom-mlg.sch.id/assets/frontend/images/footer.svg" style="width:100%">
             </div>
-        
             <div class="column">
-              <form action="/action_page.php">
-                    <label for="nama">Nama (required)</label><input type="text" id="nama" name="nama" placeholder="">
-          
-            <label for="email">Email (required)</label>
-            <input type="email" id="email" name="email" placeholder="">
-          
-            <label for="subject">Pesan</label>
-            <textarea id="pesan" name="pesan" placeholder="" style="height:150px"></textarea>
-          
-            <input type="button" value="kirim" onclick="hasil()">
-              <br>
-              <br>
+                <form action="/action_page.php">
+                  <label for="fname">Nama Lengkap</label><input type="text" id="fname" name="fname" placeholder="">
 
-              <p id="hasil-nama"></p>
-              <p id="hasil-email"></p>
-              <p id="hasil-pesan"></p>
+                  <br />
+
+                  <label for="fname">Email</label><br />
+                  <input name="email" type="email" id="email" placeholder="" >
+                  <br />
+                  
+                  <label for="daerah">Jurusan</label><br />
+                  <select id="daerah" name="Daerah">
+                    <option value="">Pilih Jurusan</option>
+                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                    <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
+                    <option value="Teknik Jaringan Akses">Teknik Jaringan Akses</option>
+                  </select>
+                  <br />
           
-            </form>
-        <script>
-            function hasil() {
-                var nama = document.getElementById("nama").value ;
-                var email = document.getElementById("email").value ;
-                var pesan = document.getElementById("pesan").value ;
-
-                if (nama !="" && email !="" && pesan!=""){
-                    document.getElementById("hasil-nama").innerHTML = nama
-                    document.getElementById("hasil-email").innerHTML = email
-                    document.getElementById("hasil-pesan").innerHTML = pesan
-                    return True;
-                }else{
-                    alert('Mohon isi form dengan lengkap !');
-            }
-            
-        }
-    
-    </script>
-
-<hr>
+                  <label for="pesan">Pesan</label><br />
+                  <textarea name="subject" type="text" id="pesan"  placeholder="" style="height:150px"></textarea>
+                  <br />
+          
+                  <input type="button" value="Cancel" class="tbl-cancle" onclick ="clear">
+                  <input type="button" value="Kirim" class="tbl-kirim" onclick ="hasil()">
+          
+                  <br>
+                  <p id="hasil-fname"></p>
+                  <p id="hasil-email"></p>
+                  <p id="hasil-daerah"></p>
+                  <p id="hasil-pesan"></p>
+                  <br>
+          
+                  <script>
+                    function hasil() {
+                      var fname = document.getElementById("fname").value ;
+                      var email = document.getElementById("email").value ;
+                      var daerah = document.getElementById("daerah").value ;
+                      var pesan = document.getElementById("pesan").value ;
+          
+                      if(fname != "" && email != "" && daerah !="" && pesan !="") {
+                        document.getElementById("hasil-fname").innerHTML = fname
+                        document.getElementById("hasil-email").innerHTML = email
+                        document.getElementById("hasil-daerah").innerHTML = daerah
+                        document.getElementById("hasil-pesan").innerHTML = pesan 
+                        return true;
+                      }else{
+                        alert('Mohon isi form dengan lengkap !')
+                      }
+                    }
+                  </script>
+          <hr>
 <footer style="text-align: center;">
     <p>Made with ❤️ Kelompok 4</p>
 </footer>
